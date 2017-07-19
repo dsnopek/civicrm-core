@@ -68,14 +68,55 @@
     "civicrm/civicrm-cxn-rpc": "~0.17.07.01",
     "pear/Auth_SASL": "1.1.0",
     "pear/Net_SMTP": "1.6.*",
-    "pear/Net_socket": "1.0.*"
+    "pear/Net_socket": "1.0.*",
+    "bower-asset/angular": "~1.5.0",
+    "bower-asset/angular-file-upload": ">=1.1.5 <=1.1.6",
+    "bower-asset/angular-jquery-dialog-service": "dev-civicrm",
+    "bower-asset/angular-mocks": "~1.5.0",
+    "bower-asset/angular-route": "~1.5.0",
+    "bower-asset/angular-ui-sortable": "0.12.x",
+    "bower-asset/angular-ui-utils": "0.1.x",
+    "bower-asset/angular-unsavedChanges": "~0.1.1",
+    "bower-asset/qunit": "~1.10",
+    "bower-asset/d3": "3.4.11",
+    "bower-asset/jquery": "~1.12",
+    "bower-asset/jquery-ui": "~1.12",
+    "bower-asset/lodash-compat": "~3.0",
+    "bower-asset/google-code-prettify": "~1.0",
+    "bower-asset/select2": "dev-stable/3.5",
+    "bower-asset/jquery-validation": "~1.13",
+    "bower-asset/datatables": "~1.10",
+    "bower-asset/jstree": "~3",
+    "bower-asset/ckeditor": "~4.5",
+    "bower-asset/font-awesome": "~4",
+    "bower-asset/angular-bootstrap": "^2.5.0",
+    "bower-asset/angular-sanitize": "~1.5.0",
+    "bower-asset/phantomjs-polyfill": "^0.0.2"
   },
-  "repositories": [
-    {
+  "repositories": {
+    "zetacomponents-mail": {
       "type": "git",
       "url": "https://github.com/civicrm/zetacomponents-mail.git"
+    },
+    "asset": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
     }
-  ],
+  },
+  "config": {
+    "fxp-asset": {
+      "repositories": [
+        {
+          "type": "bower-vcs",
+          "url": "https://github.com/totten/angular-jquery-dialog-service.git"
+        },
+        {
+          "type": "bower-vcs",
+          "url": "https://github.com/colemanw/select2.git"
+        }
+      ]
+    }
+  },
   "scripts": {
     "post-install-cmd": [
       "bash tools/scripts/composer/dompdf-cleanup.sh",
